@@ -26,7 +26,7 @@ run the tests in other browsers, but you'll need to tweak the code.
 
 ## Running a REPL ##
 
-- Run `lein fig:build`
+- Run `make repl`
 - Browse to http://localhost:9500/
 
 Thanks to `figwheel`, any source changes will automatically be compiled and the browser reloaded.
@@ -58,12 +58,15 @@ With this done, you should now be able to set breakpoints in the code:
 
 ## Creating a production build ##
 
-- Run `lein cljsbuild once`
+- Run `make dist`
+
+## Running unit tests ##
+
+- Run `make test`
 
 ## Running end-to-end integration tests ##
 
-- Run `lein cljsbuild once`
-- Run `lein test :integration`
+- Run `make integration-test`
 
 In the real world, we would need to stand up a back-end server to end-to-end test against. This is just a simple example
 that tests the front-end.
